@@ -309,8 +309,8 @@ article
 
 #contacts>span
 {
-	width:21%;
-	height:18%;
+	width:20%;
+	height:16%;
 	padding:1%;
 	font-size:.25em;
 	float:left;
@@ -349,7 +349,6 @@ article
 .fb-like
 {
 	margin:3% 5% 0 0%;
-	background-color: rgba(255,255,255,0.5);
 	padding:10px;
 	float:right;
 }
@@ -375,5 +374,6 @@ article
 {
 	border-top:1px solid #999;
 	background-image:url('../img/mb_nitc.png');
-	background-size:200%;	
+	background-size:200%;
+	background-color:#eee;
 }
