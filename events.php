@@ -1,9 +1,9 @@
 <html>
 <head>
 </head>
-	 <link href="style/style.css" rel="stylesheet">
+	 <link href="style/event_style.css" rel="stylesheet">
 	 <script type='text/javascript' src='scripts/jquery.min.js'></script>
-	 <script type='text/javascript' src='scripts/script.js'></script>
+	 <script type='text/javascript' src='scripts/event_script.js'></script>
 </head>
 <body>
 <div id='events_list'>
