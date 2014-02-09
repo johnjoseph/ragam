@@ -1,9 +1,9 @@
 <html>
 <head>
 </head>
-	 <link href="style/event_style.css" rel="stylesheet">
-	 <script type='text/javascript' src='scripts/jquery.min.js'></script>
-	 <script type='text/javascript' src='scripts/event_script.js'></script>
+	<link href="style/event_style.css" rel="stylesheet">
+	<script type='text/javascript' src='scripts/jquery.min.js'></script>
+	<script type='text/javascript' src='scripts/event_script.js'></script>
 </head>
 <body>
 <div id='menu'></div>
@@ -36,6 +36,28 @@
     <span class="clear"></span>
   </div>
 </div>
-<div style='height:1000px;width:100%;float:left;'></div>
+<div id="content_wrap">
+  <div id="event_wrap">
+  <div id="event_head">
+    <span id="event_logo" style="background-image: url(img/oat_crowd.jpg); background-position: -300px;"></span><span id="event_title">Antakshari</span>
+  </div>
+  <div id="event_main">
+    <ul id="edesc_sections">
+      <li class="edesc_focused"><a href="#Intro">Introduction</a></li>
+      <li><a href="#Prize">Prize</a></li>
+      <li><a href="#Contact">Contacts</a></li>
+    </ul>
+    <span class="clear"></span>
+    <div id="event_text">
+      <h3 id="Intro">Introduction</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+      <h3 id="Prize">Prizes</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+      <h3 id="Contact">Contacts</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+    </div>
+  </div>
+  </div>
+</div>
 </body>
 </html>
