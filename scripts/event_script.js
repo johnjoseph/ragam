@@ -16,13 +16,21 @@ function sail(eventname)
 				for(var i=0;i<desc.length;i++)
 				{
 					var sec=desc[i].split('||ttl||');
-					if(i){$('#edesc_sections').append("<li><a href='#"+sec[0]+"'>"+sec[0]+"</a></li>")};
-					if(i){$('<h3/>').appendTo('#event_text').html(sec[0])};
+					if(i){$('#edesc_sections').append("<li><a href='events/"+eventname+"/#"+sec[0]+"'>"+sec[0]+"</a></li>")};
+					if(i){$('<h3/>',{'id':sec[0]}).appendTo('#event_text').html(sec[0])};
 					$('<p/>').appendTo('#event_text').html(sec[1]);
 				}
+			    $('html, body').animate({
+			        scrollTop:$('#content_wrap').offset().top
+			    },800);
 			}
 
 	});
+}
+
+function shuffle()
+{
+
 }
 
 $(document).ready(function()
@@ -32,5 +40,15 @@ $(document).ready(function()
 	{
 		sail(path[3]);
 	}
+	else if((path[2]=="events")&&(path[3]==""))
+	{
+		sail(shuffle());
+	}
+	$('#elist_moveup').click(function()
+	{
+	    $('#elist_wrap').animate({
+	        'margin-top':-$('#elist_wrap').height()
+	    },800);
+	});
 });
 
