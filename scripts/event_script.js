@@ -58,9 +58,20 @@ $(document).ready(function()
 	}
 	$('#elist_moveup').click(function()
 	{
-	    $('#elist_wrap').animate({
-	        'margin-top':-$('#elist_wrap').height()
-	    },800);
+	  $('#elist_wrap').animate({
+	    'margin-top':-$('#elist_wrap').height()
+	  },800);
 	});
+  $('#elist>li>h4').click(function() {
+    if ($('#elist_filter').width() >= 175) return true;
+    var visible_cat=$('#elist>li>ul:visible');
+    if (visible_cat.length > 0) {
+      visible_cat.hide(300, function () { this.removeAttribute("style"); });
+    }
+    var sib_ul = $(this).closest('li').children('ul');
+    if (sib_ul.is(':hidden')) {
+      sib_ul.show(300);
+    }
+  });
 });
 
