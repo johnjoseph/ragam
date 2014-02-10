@@ -12,7 +12,7 @@
 body
 {
 	font-family:opensans;
-  background-color: #f2f5ff;
+  background-color: #fff;
 }
 
 .clear
@@ -31,13 +31,13 @@ body
 {
   margin: 0 auto;
   width: 94%;
+  border-bottom:1px dotted #eee;
 }
 
 #elist_filter,#elist_moveup
 {
   float: left;
   height: 40px;
-  background-color: #e2e7fa;
   display: none;
   margin: 10px 0;
 }
@@ -110,13 +110,12 @@ ul { list-style-type:none;padding:0; }
 
 #content_wrap
 {
-  background-image:url('../img/oat_crowd.jpg'); 
-  color: #eee;
+  color: #333;
 }
 
 #event_wrap
 {
-  width: 70%;
+  width: 80%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 0 20px;
@@ -132,11 +131,16 @@ ul { list-style-type:none;padding:0; }
 
 #event_text
 {
-  background-color: #f5f5f5;
   overflow: auto;
   color: #333;
   padding: 20px;
   font-size:.8em;
+}
+
+#event_text p
+{
+  border-bottom:1px solid #f0f0f0;
+  width:60%;
 }
 
 h3 { margin: 4px 0 10px; }

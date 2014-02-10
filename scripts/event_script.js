@@ -26,11 +26,6 @@ function sail(eventname)
 	});
 }
 
-function shuffle()
-{
-
-}
-
 $(document).ready(function()
 {
 	var path=window.location.pathname.split('/');

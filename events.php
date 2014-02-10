@@ -45,7 +45,7 @@
 <div id="content_wrap">
   <div id="event_wrap">
   <div id="event_head">
-    <span id="event_logo" style="background-image: url(img/oat_crowd.jpg)"></span><span id="event_title">Classical Music Solo</span>
+    <span id="event_title"></span>
   </div>
   <div id="event_main">
     <span class="clear"></span>
