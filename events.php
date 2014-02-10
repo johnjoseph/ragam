@@ -1,6 +1,7 @@
 <html>
 <head>
 </head>
+	 <base href='/ragam/'>
 	 <link href="style/event_style.css" rel="stylesheet">
 	 <script type='text/javascript' src='scripts/jquery.min.js'></script>
 	 <script type='text/javascript' src='scripts/event_script.js'></script>
@@ -23,7 +24,8 @@
 		$result2=$mysqli->query($query2);
 		while($row2=$result2->fetch_assoc())
 		{
-			$ul.="<a href='events/$row2[name]'><li>".$row2['name']."</li></a>";
+			$name=str_replace(' ','',$row2[name]);
+			$ul.="<a href='events/$name'><li>".$row2['name']."</li></a>";
 			$select.="<option>".$row2['name']."</option>";
 		}
 		$foo.=$ul."</ul>";
@@ -32,6 +34,14 @@
 	echo $foo;
 ?>
 </div>
-<div style='height:1000px;width:100%;float:left;'></div>
+<div style='height:1000px;width:100%;float:left;'>
+<?php
+	$id=$_REQUEST['id'];
+	$query="SELECT * FROM `events` WHERE `code`='$id'";
+	$result=$mysqli->query($query);
+	$row=$result->fetch_assoc();
+	echo $row['longdesc'];
+?>	
+</div>
 </body>
 </html>
