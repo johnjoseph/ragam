@@ -27,9 +27,8 @@
 		while($row2=$result2->fetch_assoc())
 		{
 
-			$name=str_replace(' ','',$row2[name]);
-			$ul.="<a href='events/$name'><li>".$row2['name']."</li></a>";
-			$ul.="<li><a href='events/$row2[name]'>".$row2['name']."</a></li>";
+			$name=str_replace(' ','_',$row2[name]);
+			$ul.="<li><a href='events/$name'>".$row2['name']."</a></li>";
 			$select.="<option>".$row2['name']."</option>";
 		}
 		$foo.=$ul_hd.$ul."</ul>";
@@ -62,15 +61,6 @@
     </div>
   </div>
   </div>
-</div>
-<div style='height:1000px;width:100%;float:left;'>
-<?php
-	$id=$_REQUEST['id'];
-	$query="SELECT * FROM `events` WHERE `code`='$id'";
-	$result=$mysqli->query($query);
-	$row=$result->fetch_assoc();
-	echo $row['longdesc'];
-?>	
 </div>
 </body>
 </html>
