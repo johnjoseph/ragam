@@ -9,15 +9,34 @@ function sail(eventname)
 			dataType:'json',
 			success:function(response)
 			{
-				$('#event_text').html('');
 				$('#event_title').html(response['name']);
 				var desc=response['desc'].split('||sec||');
 				for(var i=0;i<desc.length;i++)
 				{
 					var sec=desc[i].split('||ttl||');
-					if(i){$('<h3/>',{'id':sec[0]}).appendTo('#event_text').html(sec[0])};
-					$('<p/>').appendTo('#event_text').html(sec[1]);
+					var content=(i)?'<h3>'+sec[0]+'</h3><p>'+sec[1]+'</p>':'<p>'+sec[1]+'</p>';
+					var title=sec[0].replace(' ','_');
+					if(title=='Prize_Money')
+					{
+						$('<span/>',{'id':title}).appendTo('#event_text_left').html(content);
+					}
+					else
+					{
+						$('<span/>',{'id':title}).appendTo('#event_text_right').html(content);
+					}
 				}
+				var contacts=response['contacts'].split('||0||');
+				var con_out='';
+				for(var i=0;i<2;i++)
+				{
+					var con=contacts[i].split('||@||');
+					for(var j=0;j<con.length;j++)
+					{
+						con_out+=con[j]+'<br/>';
+					}
+					con_out+='<br/><br/>';	
+				}
+				$('<span/>',{'id':'contacts'}).appendTo('#event_text_left').html('<h3>Contacts</h3>'+con_out);
 			    $('html, body').animate({
 			        scrollTop:$('#content_wrap').offset().top
 			    },800);

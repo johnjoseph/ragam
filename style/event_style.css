@@ -110,7 +110,8 @@ ul { list-style-type:none;padding:0; }
 
 #content_wrap
 {
-  color: #333;
+  color: #fff;
+  background-color:#d35400;
 }
 
 #event_wrap
@@ -132,15 +133,29 @@ ul { list-style-type:none;padding:0; }
 #event_text
 {
   overflow: auto;
-  color: #333;
   padding: 20px;
   font-size:.8em;
 }
 
-#event_text p
+#event_text>span>span
 {
-  border-bottom:1px solid #f0f0f0;
-  width:60%;
+  float:left;
+  width:100%;
+  background-color:#e67e22;
+  padding:20px; 
+}
+
+#event_text_right
+{
+  width:50%;
+  float:left;
+}
+
+#event_text_left
+{
+  width:20%;
+  float:left;
+  margin-right:8%; 
 }
 
 h3 { margin: 4px 0 10px; }

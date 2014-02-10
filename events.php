@@ -50,6 +50,8 @@
   <div id="event_main">
     <span class="clear"></span>
     <div id="event_text">
+    <span id='event_text_left'></span>
+    <span id='event_text_right'></span>
     </div>
   </div>
   </div>
