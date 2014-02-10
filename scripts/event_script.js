@@ -10,13 +10,11 @@ function sail(eventname)
 			success:function(response)
 			{
 				$('#event_text').html('');
-				$('#edesc_sections').html("<li class='edesc_focused'><a href='#Intro'>Introduction</a></li>");
 				$('#event_title').html(response['name']);
 				var desc=response['desc'].split('||sec||');
 				for(var i=0;i<desc.length;i++)
 				{
 					var sec=desc[i].split('||ttl||');
-					if(i){$('#edesc_sections').append("<li><a href='events/"+eventname+"/#"+sec[0]+"'>"+sec[0]+"</a></li>")};
 					if(i){$('<h3/>',{'id':sec[0]}).appendTo('#event_text').html(sec[0])};
 					$('<p/>').appendTo('#event_text').html(sec[1]);
 				}

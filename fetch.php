@@ -6,6 +6,7 @@
 	$row=$result->fetch_assoc();
 	$arr=array();
 	$arr['name']=$row['name'];
+//	$desc=preg_replace(array('<b>','</b>','<i>','</i>'),' ',$row['longdesc']);
 	$arr['desc']="Introduction||ttl||".$row['longdesc'];
 	$json=json_encode($arr);
 	print_r($json);
