@@ -34,7 +34,10 @@
 <div id='menu'></div>
 <div id="elist_wrap">
   <div id="elist_filter">
-    
+    <h3>Filters</h3>
+    <span class="input_wrap">
+      <input placeholder="Filter by Keywords" type="text" id="key_filter" />
+    </span>
   </div>
   <ul id="elist">
     <?php echo $cat_lis; ?>
