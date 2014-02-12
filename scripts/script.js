@@ -54,8 +54,10 @@ function resize()
 }
 
 /* scroll assist */
+
 if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
 window.onmousewheel = document.onmousewheel = wheel;
+
 
 function wheel(event,index) {
     var delta = 0;
@@ -102,14 +104,9 @@ function handle(delta,scrollTop) {
 	    },1500,function(){animating=0;});		
 }
 
+
 $(document).ready(function()
 {
-	$('#prev_sponsors_icon').click(function()
-	{
-	    $('html, body').stop().animate({
-	        scrollTop:14*h
-	    },1500,function(){animating=0;});
-	});
 	$('#contacts_icon').click(function()
 	{
 	    $('html, body').stop().animate({

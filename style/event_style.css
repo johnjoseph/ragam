@@ -152,7 +152,6 @@ ul { list-style-type:none; padding:0; }
 #event_text>span>span
 {
   background-color: #e67e22;
-  padding: 20px;
   display: block;
 }
 
@@ -174,6 +173,13 @@ ul { list-style-type:none; padding:0; }
 #event_text_left>span
 {
   margin-bottom:15px;
+  padding: 20px;
+}
+
+#event_text_right>span
+{
+  padding:20px;
+  padding-right:30%;
 }
 
 h3 { margin: 4px 0 10px; }

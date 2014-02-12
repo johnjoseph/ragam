@@ -36,15 +36,14 @@
 <span class='lg' id='logo'><img width='100%' src='img/logo.png'/></span>
 <div id='menu'>
 	<span class='lg' style='float:left;margin-left:5%;'>RAGAM</span>
-	<a href='/2013' target='_blank' style='text-decoration:none;color:#fff;'><span id='prev_website_icon'>Ragam '13 website  &nbsp | &nbsp</span></a>
-	<span id='prev_sponsors_icon'>previous sponsors  &nbsp | &nbsp</span>
-	<span id='contacts_icon'>contacts</span>
+	<a href='/2013' target='_blank' style='text-decoration:none;color:#fff;'><span id='prev_website_icon'>Ragam '13 website  &nbsp | &nbsp</span></a><span id='contacts_icon'>contacts</span>
 </div>
 <!--
 <a href="http://www.csslight.com/user/detail/Ragam-NITC_5568" style="position: fixed;top: 8%;left: 0px;z-index: 10;" target="_blank"><img src='img/csslight.png' width='70%'/></a>
 <a href="http://www.bestcss.in/user/detail/RagamNITC-1298" style="position: fixed;top: 14%;left: 0px;z-index: 10;" target="_blank"><img src='img/bestcss.png' width='70%'/></a>
 -->
 <!-- fixed container begin -->
+<!--
 	<div id="scroll_wrap">
 		<section data-type="section">
 			<img src='img/day.png' width='40%'/>
@@ -73,6 +72,7 @@
 
 		</div>
 	</div>
+-->	
 <!-- fixed container end -->
 <!-- bonnet -->	
 	<div class="fix" id='bg1'>
@@ -81,7 +81,7 @@
 	</div>
 	<div class='section_wrap' id="section_wrap_alpha">
 <!-- #awesomeness festified -->	
-		<section style="background-image:url('img/shankar.jpg');background-size:contain;" data-type="section" data-speed="10">
+		<section style="background-image:url('img/farhan.jpg');background-size:contain;" data-type="section" data-speed="10">
 			<div id='hd1'>Culture personified</div><div id='hd2'>Awesomeness festified</div><div id='hd3'>March 13-16</div>	
 			<div class="fb-like" data-href="https://www.facebook.com/Ragam.nitc" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
 		</section>
@@ -109,7 +109,7 @@
 		</section>
 <!-- second window -->		
 		<div class='window' style='background-image:none;'>
-			<span>Get noticed</span>
+			<span></span>
 		</div>
 <!-- celebrating tradition -->
 		<section data-type="section" data-speed="10">
@@ -121,7 +121,7 @@
 		</div>	
 		</section>
 <!-- what you can do at ragam -->
-		<section style='border-top:1px solid #999;' data-type="section" data-speed="10">
+<!--		<section style='border-top:1px solid #999;' data-type="section" data-speed="10">
 		<div id='icon_panel'>
 			<div id='icon_panel_desc'>One Place, Many Reasons</div>
 			<div id='icon_panel_ic'>
@@ -136,14 +136,13 @@
 			</div>
 		</div>
 		</section>					
+-->
 <!-- create memories -->		
-		<section style="background-image:url('img/memories.jpg');background-size:contain;" data-type="section" data-speed="10">
+<!--		<section style="background-image:url('img/memories.jpg');background-size:contain;" data-type="section" data-speed="10">
 			<article>create memories</article>
-		</section>								
-	</div>
-<!-- boot -->	
-	<div class='section_wrap' id="section_wrap_beta">
-		<section data-type="section" data-speed="10">
+		</section>
+-->
+<!--		<section data-type="section" data-speed="10">
 			<span id='prv_spn_ttl'>Big pockets, Bigger hearts</span>
 			<div id='prev_sponsors'>
 				<span> <img src='img/sponsors/amity.png'/></span>
@@ -164,6 +163,7 @@
 				<span> <img src='img/sponsors/week.png'/></span>
 			</div> 
 		</section>	
+-->
 		<section id="footer" data-type="section" data-speed="10">
 			<div id='contacts'>
 				<span><span>Convenor</span><br/>Amaljeev T R<br/>+91 9496847336<br/>amaljeev@ragam.org.in</span>
@@ -178,7 +178,11 @@
 				<span style='text-align:center;width:100%'>Credits: Creative and Intellectual minds of NIT Calicut</span>								
 			</div>
 		</section>
-		<a target='_blank' href='http://www.nitc.ac.in'><span id='nitc_logo'><img width='60%' src='img/nitc.png'/></span></a>			
+		<a target='_blank' href='http://www.nitc.ac.in'><span id='nitc_logo'><img width='60%' src='img/nitc.png'/></span></a>										
+	</div>
+<!-- boot -->	
+	<div class='section_wrap' id="section_wrap_beta">
+			
 	</div>
 </body>
 </html>
