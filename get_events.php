@@ -10,7 +10,7 @@ if ($sq) {
 
 $mysqli = new mysqli($host,$db_user,$db_password,$db_name);
 if ($mysqli->connect_errno)
-  die("[-1]");
+  die(-1);
 
 $conitions = array();
 for ($i = 0; $i < count($qwords); $i++) {

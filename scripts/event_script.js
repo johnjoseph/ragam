@@ -14,7 +14,7 @@ function sail(eventname)
 			for(var i=0;i<desc.length;i++)
 			{
 				var sec=desc[i].split('||ttl||');
-				var content='<h3>'+sec[0]+'</h3><p>'+sec[1]+'</p>';
+				var content='<h2>'+sec[0]+'</h2><p>'+sec[1]+'</p>';
 				var title=sec[0].replace(' ','_');
 				if(title=='Prize_Money')
 				{
@@ -36,7 +36,7 @@ function sail(eventname)
 				}
 				con_out+='<br/><br/>';	
 			}
-			$('<span/>',{'id':'contacts'}).appendTo('#event_text_left').html('<h3>Contacts</h3>'+con_out);
+			$('<span/>',{'id':'Contacts'}).appendTo('#event_text_left').html('<h2>Contacts</h2>'+con_out);
       $('html, body').animate({
 				scrollTop:$('#content_wrap').offset().top
       },800);
@@ -44,6 +44,7 @@ function sail(eventname)
 	});
 }
 
+var keyFilter = null, teamFilter = null, prizeFilter = null;
 $(document).ready(function()
 {
 	var path=window.location.pathname.split('/');
@@ -74,17 +75,54 @@ $(document).ready(function()
   });
 
   var keypressTimeout;
-  $('input#key_filter').keypress(function() { /* this does not handle backspace */
+  $('input#key_filter').keypress(function(e) { /* this does not handle backspace */
     var kf_in = this;
 
-    if (keypressTimeout) clearTimeout(keypressTimeout);
+    if (keypressTimeout)
+      clearTimeout(keypressTimeout);
+    
+    var code = e.keyCode || e.which;
+    if (code == 13) {
+      filterRequest(kf_in.value);
+      return true;
+    }
+
     keypressTimeout = setTimeout(function() {
       filterRequest(kf_in.value);
     }, 1200);
   }).blur(function() {
-    if (this.value == "") {
-      $(".filtered").removeClass("filtered");
+    if (this.value.trim() == "") {
+      keyFilter = null;
+      filterUpdate();
     }
+  });
+  $("#team_filter").noUiSlider({
+     range: [1, 20]
+    ,start: [1, 20]
+    ,handles: 2
+    ,step: 1
+    ,margin: 0
+    ,connect: true
+    ,behaviour: 'tap'
+    ,serialization: {
+      resolution: 1
+      ,to: [ [ $("#stz_lo"), 'html'], [ $("#stz_hi"), 'html'] ]
+    }
+  }).change(function(){
+    /*
+    $.ajax({
+      url: "get_events.php",
+      data: { lo: $("#stz_lo").html(), hi: $("#stz_hi").html() },
+      dataType: "json",
+      success: function(data, status, jqx) {
+        if (data instanceof Array) {
+          teamFilter = data;
+        } else {
+          teamFilter = null;
+        }
+        filterUpdate();
+      }
+    });*/
   });
 });
 
@@ -94,12 +132,45 @@ function filterRequest(query) {
     data: { q : query },
     dataType: "json",
     success: function(data, status, jqx) {
-      $(".filtered").removeClass("filtered");
-      if (data) {
-        for (var i = 0; i<data.length; i++) {
-          $("#e_"+data[i]).addClass("filtered");
-        }
+      if (data instanceof Array) {
+        keyFilter = data;
+      } else {
+        keyFilter = null;
       }
+      filterUpdate();
     }
   });
+}
+
+function intersection(arr1, arr2) {
+  var res = [];
+  if (!arr1 || !arr2) return res;
+  for (i=0; i<arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) >= 0)
+      res.push(arr2[i]);
+  }
+  return res;
+}
+
+function filterUpdate() {
+  var finalFilter = keyFilter;
+  var i;
+
+  if (finalFilter === null)
+    finalFilter = teamFilter;
+  else  if (teamFilter !== null) {
+    finalFilter = intersection(finalFilter, teamFilter);
+  }
+
+  if (finalFilter === null)
+    finalFilter = prizeFilter;
+  else if (prizeFilter !== null) {
+    finalFilter = intersection(finalFilter, prizeFilter);
+  }
+
+  $(".filtered").removeClass("filtered");
+  if (finalFilter === null) return;
+  for (var i = 0; i<finalFilter.length; i++) {
+    $("#e_"+finalFilter[i]).addClass("filtered");
+  }
 }
