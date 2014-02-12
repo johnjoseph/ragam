@@ -18,17 +18,41 @@
     $cat_lis .= $cat_cur."</ul></li>";
   }
   $result1->free();
-  echo $foo;
+  
+  $cat_illus = "img/illustrations/general.png";
+  $cat_color_bg = "#16a085";
+  $cat_color_fg = "#1abc9c";
+  $event_icon = "img/icons/choreo.png";
 ?>
 <!DOCTYPE html>
 <html>
 <head>
   <base href='/ragam/' />
   <link href="style/event_style.css" rel="stylesheet">
-  <link href="style/jquery.nouislider.min.css" rel="stylesheet">
+  <link href="style/jquery.nouislider.css" rel="stylesheet">
   <script type='text/javascript' src='scripts/jquery.min.js'></script>
   <script type='text/javascript' src='scripts/jquery.nouislider.min.js'></script>
   <script type='text/javascript' src='scripts/event_script.js'></script>
+  <style>
+#content_wrap
+{
+  background-color: <?php echo $cat_color_bg; ?>;
+}
+#event_text>span>span
+{
+  background-color: <?php echo $cat_color_fg; ?>;
+}
+#event_logo
+{
+  border-color: <?php echo $cat_color_bg; ?>;
+  background-color: <?php echo $cat_color_fg; ?>;
+  background-image: url('<?php echo $event_icon; ?>');
+}
+#cat_illus
+{
+  background-image: url('<?php echo $cat_illus; ?>');
+}
+  </style>
 </head>
 <body>
 <div id='menu'></div>
@@ -38,6 +62,11 @@
     <span class="input_wrap">
       <input placeholder="Filter by Keywords" type="text" id="key_filter" />
     </span>
+    <span id="selected_team_size">
+      <span id="stz_lo"></span> - <span id="stz_hi"></span>
+    </span>
+    <h5>Team size:</h5>
+    <div id="team_filter"></div>
   </div>
   <ul id="elist">
     <?php echo $cat_lis; ?>
@@ -46,15 +75,16 @@
 <div id="content_wrap">
   <div id="event_wrap">
   <div id="event_head">
-  	<span id="event_logo"><img src='img/icons/choreo.png' height='125px'/></span>
+  	<span id="event_logo"></span>
     <span id="event_title"></span>
   </div>
   <div id="event_main">
     <div id="event_text">
-    <span id='event_text_left'></span>
-    <span id='event_text_right'></span>
+      <span id='event_text_left'></span>
+      <span id='event_text_right'></span>
     </div>
   </div>
+  <div id='cat_illus'></div>
   </div>
 </div>
 </body>
