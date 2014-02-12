@@ -181,21 +181,22 @@ p { margin: 4px 0 16px; }
 
 @media screen and (max-width: 649px)
 {
-  #event_wrap { width: auto; }
-  #elist_filter { width: 30%; max-width: 172px; }
+  #elist_filter { width: 30%; max-width: 160px; }
   #elist>li  { float: none; width: auto; padding: 2px 8px; margin: 0; }
   #elist>li>h4  { cursor: pointer; padding: 6px 0; }
   #elist ul  { display:none; padding-left: 4px; }
+  #event_text_left { margin-right: 0; }
 }
 
-@media screen and (max-width: 799px)
+@media screen and (max-width: 819px)
 {
   #elist_wrap { width: auto; margin-left: 10px; margin-right: 10px; }
+  #event_wrap { width: auto; }
 }
 
 @media screen and (min-width: 650px)
 {
-  #elist_filter { display:block; width: 175px; }
+  #elist_filter { display:block; width: 160px; }
 }
 
 @media screen and (min-width: 820px)
