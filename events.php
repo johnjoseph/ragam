@@ -46,6 +46,7 @@
 <div id="content_wrap">
   <div id="event_wrap">
   <div id="event_head">
+  	<span id="event_logo"><img src='img/icons/choreo.png' height='125px'/></span>
     <span id="event_title"></span>
   </div>
   <div id="event_main">

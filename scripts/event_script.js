@@ -14,7 +14,7 @@ function sail(eventname)
 			for(var i=0;i<desc.length;i++)
 			{
 				var sec=desc[i].split('||ttl||');
-				var content=(i)?'<h3>'+sec[0]+'</h3><p>'+sec[1]+'</p>':'<p>'+sec[1]+'</p>';
+				var content='<h3>'+sec[0]+'</h3><p>'+sec[1]+'</p>';
 				var title=sec[0].replace(' ','_');
 				if(title=='Prize_Money')
 				{
@@ -30,9 +30,9 @@ function sail(eventname)
 			for(var i=0;i<2;i++)
 			{
 				var con=contacts[i].split('||@||');
-				for(var j=0;j<con.length;j++)
+				for(var j=0;j<3;j++)
 				{
-					con_out+=con[j]+'<br/>';
+					con_out+=(j==2)?con[j]+'@ragam.org.in<br/>':con[j]+'<br/>';
 				}
 				con_out+='<br/><br/>';	
 			}
