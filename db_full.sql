@@ -3,6 +3,208 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
+-- Generation Time: Feb 12, 2014 at 09:56 PM
+-- Server version: 5.5.33-31.1
+-- PHP Version: 5.3.17
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `nitcfest_ragam14`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cat_xtra`
+--
+
+CREATE TABLE IF NOT EXISTS `cat_xtra` (
+  `id` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `color1` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `color2` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `cat_xtra`
+--
+
+INSERT INTO `cat_xtra` (`id`, `color1`, `color2`) VALUES
+('5', '#1ABC9C', '#16A085'),
+('6', '#3498DB', '#2980B9'),
+('7', '#E74C3C', '#C0392B'),
+('8', '#E67E22', '#D35400'),
+('9', '#F1C40F', '#F39C12'),
+('10', '#2ECC71', '#27AE60'),
+('11', '#9B59B6', '#8E44AD'),
+('12', '#8A4465', '#7D3858'),
+('13', '#34495E', '#2C3E50'),
+('14', '#95A5A6', '#7F8C8D');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- phpMyAdmin SQL Dump
+-- version 3.5.5
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Feb 12, 2014 at 09:56 PM
+-- Server version: 5.5.33-31.1
+-- PHP Version: 5.3.17
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `nitcfest_ragam14`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event_xtra`
+--
+
+CREATE TABLE IF NOT EXISTS `event_xtra` (
+  `code` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `prize` int(11) NOT NULL,
+  `min` int(11) NOT NULL,
+  `max` int(11) NOT NULL,
+  PRIMARY KEY (`code`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `event_xtra`
+--
+
+INSERT INTO `event_xtra` (`code`, `prize`, `min`, `max`) VALUES
+('ACS', 20000, 3, 12),
+('ADZ', 6500, 1, 3),
+('AMP', 43000, 6, 12),
+('ANT', 9000, 2, 3),
+('CLD', 6000, 1, 1),
+('CLG', 3750, 1, 4),
+('CMS', 3750, 1, 1),
+('CRN', 100000, 5, 50),
+('CRT', 2900, 1, 1),
+('CTB', 50000, 6, 50),
+('DEB', 10000, 2, 2),
+('DRM', 15000, 1, 50),
+('DUM', 10000, 3, 3),
+('DUP', 6000, 2, 2),
+('FPG', 2900, 2, 2),
+('JAM', 6400, 1, 1),
+('JSK', 2900, 3, 3),
+('KVP', 3250, 1, 1),
+('LMS', 3750, 1, 1),
+('MAP', 2000, 1, 1),
+('MEH', 2000, 1, 1),
+('MIM', 16000, 5, 9),
+('MMC', 3750, 1, 1),
+('MNA', 3750, 1, 1),
+('MRG', 6000, 1, 1),
+('MVS', 5000, 4, 8),
+('OPA', 5500, 1, 1),
+('OVR', 3750, 1, 1),
+('PKR', 2500, 1, 1),
+('PNT', 2900, 1, 1),
+('PRF', 6000, 2, 2),
+('PSK', 2900, 1, 1),
+('RGL', 3750, 1, 5),
+('SNP', 3250, 1, 1),
+('SPB', 2000, 1, 1),
+('STP', 16000, 5, 12),
+('STS', 3750, 1, 1),
+('SWA', 30000, 3, 20),
+('TRS', 5000, 1, 4),
+('TWT', 3250, 1, 1),
+('VGC', 3750, 1, 1),
+('WSO', 3750, 1, 1),
+('WTG', 3250, 2, 2),
+('FRS', 5000, 1, 1),
+('QUI', 36000, 1, 2);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- phpMyAdmin SQL Dump
+-- version 3.5.5
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Feb 01, 2014 at 08:42 AM
+-- Server version: 5.5.33-31.1
+-- PHP Version: 5.3.17
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `nitcfest_ragam13`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event_cats`
+--
+
+CREATE TABLE IF NOT EXISTS `event_cats` (
+  `cat_id` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `par_cat` tinyint(4) NOT NULL DEFAULT '-1',
+  `name` varchar(20) NOT NULL,
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+
+--
+-- Dumping data for table `event_cats`
+--
+
+INSERT INTO `event_cats` (`cat_id`, `par_cat`, `name`) VALUES
+(1, -1, 'Events'),
+(2, -1, 'Workshops'),
+(3, -1, 'Proshows'),
+(4, -1, 'Social Initiatives'),
+(5, 1, 'General'),
+(6, 1, 'Literary'),
+(7, 1, 'Dance'),
+(8, 1, 'Dramatics'),
+(9, 1, 'Music'),
+(10, 1, 'Fine Arts'),
+(11, 1, 'Thematic'),
+(12, 1, 'Online'),
+(13, 1, 'Gaming'),
+(14, 1, 'Sports');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- phpMyAdmin SQL Dump
+-- version 3.5.5
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
 -- Generation Time: Feb 12, 2014 at 09:57 PM
 -- Server version: 5.5.33-31.1
 -- PHP Version: 5.3.17
@@ -92,6 +294,112 @@ INSERT INTO `events` (`code`, `name`, `cat_id`, `shortdesc`, `longdesc`, `tags`,
 ('VGC', 'Vegetable Carving', 10, '', '<b>"Meat is Murder"... Go wild!</b>\r\n<br/>\r\nPut on your thinking caps, and animate these boring veggies.\r\n<br/>\r\nGrab your knives and chisel your vogue models.||sec|| Rules and Regulations||ttl||\r\n<ul>\r\n<li>Two teams per college</li>\r\n<li>3 to 6 members in a team</li>\r\n<li>Time limit: 60 minutes</li>\r\n<li>Each team will be given vegetables and tools</li>\r\n<li>Teams are not allowed to bring their own tools</li>\r\n<li>Teams can decide their own themes</li>\r\n<li>Points: (10, 6, 4) </li>\r\n</ul>||sec||Prize Money||ttl||1st INR 2000 \r\n<br/>\r\n2nd INR 1000 \r\n<br/>\r\n3rd INR 750', 'finearts carving kitchen', 'Nikita Abraham||@||8891852130||@||||0||||@||||@||||0||||@||||@||||0||', '', '1||@||1', 0),
 ('WSO', 'Western Solo', 9, 'Western Singing Competition', '<i>&#39;Sing U must.\r\nTunes from the west.\r\nPlay your lute\r\nSet ablaze the stage\r\nBe Orpheus reborn\r\nConquer hearts anew.&#39;</i>\r\n \r\n \r\n \r\nPush your chords and steal the spotlights. Here we offer you a platform to showcase your vocal skills and be the standout voice of Ragam &#39;14.\r\n \r\n\r\nRules and Regulations\r\n\r\n<ul>\r\n<li>One participant per college in each category(male &female).</li>\r\n<li>Judging will be separate for male and female categories.</li>\r\n<li>Time limit: 5 minutes per participant.</li>\r\n<li>One (only) instrumental accompaniment is permitted.</li>\r\n<li>Keyboard (piano patch only)/Electric Guitar may be provided if required.</li>\r\n<li>Points: (10, 6, 4)</li>', 'Western\r\nMusic\r\nSolo', 'Aswathi Dinakar||@||9895355239||@||wso@ragam.org||0||||@||||@||wso@ragam.org||0||||@||||@||wso@ragam.org||0||', 'First - INR 2000\r\nSecond - INR 1000', '1||@||1', 0),
 ('WTG', 'Whats The Good Word', 6, 'A Game Of Words', '<q><b>If you have the magic<br/>\r\nTo conjure words; <br/>\r\nJuggle tongues<br/>\r\nAnd brew meaning;<br/>\r\nHere&#39;s your stage!</q><br/>\r\n</b> <br/>\r\n\r\nLet your word-power play the game this Ragam. Match your wits with the masters of vocabulary and saunter away as the Lord of words.\r\n\r\n\r\n\r\n||sec||Rules and Regulations||ttl||<ul>\r\n<li>Open event with two members in a team.</li>\r\n<li>Will have a written prelims followed by a final round.</li>\r\n<li>Final round includes different word game rounds like Russian dolls, Kangaroo words, Scrabble etc.</li>\r\n<li>Points (10, 6, 4)</li>\r\n</ul>\r\n||sec||Prize Money||ttl||First Prize - INR 1500<br/>\r\nSecond Prize - INR 1000<br/>\r\nThird Prize - INR 750', 'Words\r\nWordgame', 'Kiran C Nair||@||7736372074||@||wtgw||0||Tom Sebastian||@||9037102360||@||wtgw||0||||@||||@||wtgw||0||', '', '2||@||2', 0);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- phpMyAdmin SQL Dump
+-- version 3.5.5
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Feb 12, 2014 at 09:57 PM
+-- Server version: 5.5.33-31.1
+-- PHP Version: 5.3.17
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `nitcfest_ragam14`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `managers`
+--
+
+CREATE TABLE IF NOT EXISTS `managers` (
+  `eventcode` varchar(10) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `validate` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `managers`
+--
+
+INSERT INTO `managers` (`eventcode`, `username`, `password`, `validate`) VALUES
+('-pr', 'adityapulachery', 'ragamragam', 1),
+('DUM', 'aishmaruvada', 'omalloor88', 1),
+('SWA', 'aishumaruvada', 'omalloor88', 1),
+('DEB', 'aishwaryamaruvada', 'omalloor88', 1),
+('WTG', 'aswathi', 'wtgw', 1),
+('-pr', 'athulya', 'athulya', 1),
+('CRN', 'choreonight', 'choreonite1', 1),
+('CRM', 'criminalminds', 'criminalminds', 1),
+('WSO', 'dinakar', 'ws', 1),
+('CLD', 'dishiti', 'dishiti', 1),
+('MNA', 'dishitiep', 'dishiti', 1),
+('PRF', 'dishitigupta', 'dishiti', 1),
+('DUP', 'duplicate', 'duplicate', 0),
+('FRS', 'freestyle', 'freestyle1', 1),
+('-pr', 'gokulnath', 'ragam14', 1),
+('-pr', 'hafiz', 'ragam14', 1),
+('-pr', 'jacob', 'ronaldo', 1),
+('JAM', 'jam', 'jam', 1),
+('CTB', 'joffy', 'ragam', 1),
+('FAR', 'joffycyriac', 'ragam', 1),
+('TRS', 'joffytrs', 'ragam', 1),
+('AMP', 'joffyvc', 'ragam', 1),
+('-pr', 'john', 'payasam', 1),
+('STP', 'johnku', '9h16xtjk', 1),
+('OPA', 'johnkur', 'farawaytree', 1),
+('SNP', 'johnkuri', 'supernova', 1),
+('-pr', 'kiran', 'kiran', 1),
+('LMS', 'lightmusicsolo', 'lightmusicsolo', 1),
+('PKR', 'milan', 'saintjude', 1),
+('PSK', 'milanmariya', 'saintjude', 1),
+('CMS', 'milantomy', 'saintjude', 1),
+('MIM', 'mime', 'mime', 0),
+('MMC', 'mimicry', 'mimicry', 0),
+('MRG', 'mrmsragam', 'mrmsragam1', 1),
+('ADZ', 'nakul', 'iloveindia', 1),
+('CRT', 'nakultwo', 'ilovekerala', 1),
+('OVR', 'namita', 'namita', 1),
+('ANT', 'namitak', 'namitak', 1),
+('QUI', 'namitakr', 'namitakr', 1),
+('-pr', 'nandagopal', 'ragam14', 1),
+('-pr', 'nandakumar', 'nans2693', 1),
+('FPG', 'nanditha', 'nandunni', 1),
+('DRM', 'nandithau', 'nandunni', 1),
+('KVP', 'nandithaunnikrishnan', 'nandunni', 1),
+('RGL', 'rangoli', 'rangoli', 1),
+('ACS', 'sabahmohammed', 'ragam', 1),
+('-pr', 'sikhamanoj', 'javagreen', 1),
+('MVS', 'spoof', 'spoof', 1),
+('-pr', 'stevethomas', 'stevethomas', 1),
+('STS', 'stringsolo', 'stringsolo', 1),
+('JSK', 'suzanne', 'suzanne', 1),
+('SPB', 'suzannevc', 'ragam', 1),
+('MEH', 'suze', 'suze', 1),
+('PNT', 'tarun', '12345678', 1),
+('MAP', 'tarunt', '12345678', 1),
+('CLG', 'tarunthekkel', '12345678', 1),
+('TWT', 'tinthet', 'tinthet1', 1),
+('-pr', 'tom', 'tomst', 1),
+('VGC', 'vegetablecarving', 'vegetablecarving', 1),
+('-pr', 'wasih', 'wasih', 1),
+('-pr', 'yadu', 'appy', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

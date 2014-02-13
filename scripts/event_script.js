@@ -102,22 +102,27 @@ $(document).ready(function()
     }
   });
   $("#team_filter").noUiSlider({
-     range: [1, 20]
-    ,start: [1, 20]
-    ,handles: 2
+     range: [0, 20]
+    ,start: 0
+    ,handles: 1
     ,step: 1
-    ,margin: 0
-    ,connect: true
+    ,connect: false
     ,behaviour: 'tap'
     ,serialization: {
       resolution: 1
-      ,to: [ [ $("#stz_lo"), 'html'], [ $("#stz_hi"), 'html'] ]
+      ,to: function(val) {
+        var val_str=val.toString();
+        if (val==20)
+          val_str="20+";
+        else if (val==0)
+          val_str="any";
+        $("#selected_team_size").html(val_str);
+      }
     }
   }).change(function(){
-    /*
     $.ajax({
       url: "get_events.php",
-      data: { lo: $("#stz_lo").html(), hi: $("#stz_hi").html() },
+      data: { tsize: $("#team_filter").val() },
       dataType: "json",
       success: function(data, status, jqx) {
         if (data instanceof Array) {
@@ -127,7 +132,38 @@ $(document).ready(function()
         }
         filterUpdate();
       }
-    });*/
+    });
+  });
+  $("#prize_filter").noUiSlider({
+     range: [0, 100000]
+    ,start: 0
+    ,handles: 1
+    ,step: 1000
+    ,connect: "upper"
+    ,behaviour: 'tap'
+    ,serialization: {
+      resolution: 1
+      ,to: function(val) {
+        var val_str=val.toString();
+        if (val==0)
+          val_str="any";
+        $("#selected_prize").html(val_str);
+      }
+    }
+  }).change(function(){
+    $.ajax({
+      url: "get_events.php",
+      data: { prize: $("#prize_filter").val() },
+      dataType: "json",
+      success: function(data, status, jqx) {
+        if (data instanceof Array) {
+          prizeFilter = data;
+        } else {
+          prizeFilter = null;
+        }
+        filterUpdate();
+      }
+    });
   });
 });
 

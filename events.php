@@ -62,11 +62,12 @@
     <span class="input_wrap">
       <input placeholder="Filter by Keywords" type="text" id="key_filter" />
     </span>
-    <span id="selected_team_size">
-      <span id="stz_lo"></span> - <span id="stz_hi"></span>
-    </span>
+    <span id="selected_team_size"></span>
     <h5>Team size:</h5>
     <div id="team_filter"></div>
+    <span id="selected_prize"></span>
+    <h5>Minimum Prize:</h5>
+    <div id="prize_filter"></div>
   </div>
   <ul id="elist">
     <?php echo $cat_lis; ?>
