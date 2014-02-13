@@ -36,8 +36,13 @@ function sail(eventname)
 				}
 				con_out+='<br/><br/>';	
 			}
+			var color2=response['color2'];
+			var color1=response['color1'];
 			$('<span/>',{'id':'Contacts'}).appendTo('#event_text_left').html('<h2>Contacts</h2>'+con_out);
-      $('html, body').animate({
+			$('#content_wrap').css({'background-color':color2});
+			$('#event_text>span>span').css({'background-color':color1});
+			$('#event_logo').css({'border-color':color2,'background-color':color1}); 
+	     $('html, body').animate({
 				scrollTop:$('#content_wrap').offset().top
       },800);
 		}

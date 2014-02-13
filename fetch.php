@@ -9,7 +9,8 @@
 	$desc=str_replace(array('<b>','</b>','<i>','</i>'),' ',$row['longdesc']);
 	$arr['desc']="Introduction||ttl||".$desc;
 	$arr['contacts']=$row['contacts'];
-	$query="SELECT * FROM `cat_xtra`,`events` WHERE cat_xtra.cat_id=events.cat_id";
+	$cat_id=$row['cat_id'];
+	$query="SELECT * FROM `cat_xtra`,`events` WHERE cat_xtra.id=$cat_id";
 	$result=$mysqli->query($query);
 	$row=$result->fetch_assoc();
 	$arr['color1']=$row['color1'];
