@@ -178,7 +178,7 @@
 				<span style='text-align:center;width:100%'>Credits: Creative and Intellectual minds of NIT Calicut</span>								
 			</div>
 		</section>
-		<a target='_blank' href='http://www.nitc.ac.in'><span id='nitc_logo'><img width='60%' src='img/nitc.png'/></span></a>										
+<!--		<a target='_blank' href='http://www.nitc.ac.in'><span id='nitc_logo'><img width='60%' src='img/nitc.png'/></span></a>-->										
 	</div>
 <!-- boot -->	
 	<div class='section_wrap' id="section_wrap_beta">

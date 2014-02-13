@@ -9,6 +9,11 @@
 	$desc=str_replace(array('<b>','</b>','<i>','</i>'),' ',$row['longdesc']);
 	$arr['desc']="Introduction||ttl||".$desc;
 	$arr['contacts']=$row['contacts'];
+	$query="SELECT * FROM `cat_xtra`,`events` WHERE cat_xtra.cat_id=events.cat_id";
+	$result=$mysqli->query($query);
+	$row=$result->fetch_assoc();
+	$arr['color1']=$row['color1'];
+	$arr['color2']=$row['color2'];
 	$json=json_encode($arr);
 	print_r($json);
 ?>

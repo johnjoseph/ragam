@@ -201,7 +201,8 @@ p { margin: 4px 0 16px; }
 {
   padding: 0 0 10px 40px;
   background-repeat: no-repeat;
-  background-size: 40px;
+  background-size: 25px;
+  background-position:10px 5px;
 }
 
 #Prize_Money h2 { background-image: url('../img/prize.png'); }
